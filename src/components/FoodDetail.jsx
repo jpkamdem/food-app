@@ -29,14 +29,12 @@ export default function FoodDetail({ foodId }) {
           {food.vegan ? "🐄 Vegan" : ""}
         </div>
         <div>
-          <span>💲 {food.pricePerServing/100} per serving</span>
+          <span>💲 {food.pricePerServing / 100} per serving</span>
         </div>
         <div>
           <h2>Instructions</h2>
-          {food.analyzedInstructions[0].steps.map(item => {
-            <li>
-              {item.step}
-            </li>
+          {food.analyzedInstructions[0].steps.map((item) => {
+            <li>{item.step}</li>;
           })}
         </div>
       </div>
